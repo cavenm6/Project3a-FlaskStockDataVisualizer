@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Price Graph</title>
+</head>
+<body>
+    <h1>Generated Stock Price Graph</h1>
+    <!-- Embed the SVG file -->
+    <object type="image/svg+xml" data="{{ url_for('static', filename='stock_prices_graph.svg') }}"></object>
+    <br>
+    <a href="{{ url_for('index') }}">Go Back</a>
+</body>
+</html>
