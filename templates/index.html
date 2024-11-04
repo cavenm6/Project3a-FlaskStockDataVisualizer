@@ -8,7 +8,11 @@
     <h1>Stock Data Visualizer</h1>
     <form method="POST">
         <label for="stock_symbol">Stock Symbol:</label>
-        <input type="text" id="stock_symbol" name="stock_symbol" required><br>
+        <select id="stock_symbol" name="stock_symbol" required>
+            {% for symbol in stock_symbols %}
+                <option value="{{ symbol }}">{{ symbol }}</option>
+            {% endfor %}
+        </select><br>
 
         <label for="chart_type">Chart Type:</label>
         <select id="chart_type" name="chart_type" required>
@@ -34,4 +38,5 @@
     </form>
 </body>
 </html>
+
 
